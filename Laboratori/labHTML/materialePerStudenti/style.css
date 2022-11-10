@@ -1,54 +1,50 @@
-* {
-	padding: 0em;
-	margin: 0em;
+*{
+    padding: 0em;
+    margin: 0em;
 }
-
 :root{
-	--bgcolor: #0365AE;
-	--txtcolor: #fff;
-	--breadcolor: #163f77;
-	--newscolor: #F3C42B;
-	--newstxtcolor: #000;
-	--contentxtcolor: #000;
-	--contentbgcolor: #fff;
-	--linkcolor: #fff;
-	--visitedcolor: #F3C42B;
-
+    --bgcolor: #0365AE;
+    --txtcolor: #fff;
+    --breadcolor: #163F77;
+    --newscolor: #F3C42B;
+    --newstxtcolor: #000;
+    --contentxtcolor: #000;
+    --contentbgcolor: #fff;
+    --linkcolor: #fff;
+    --visitedcolor: #f3c42b;
 }
-
-html, body{
-	font-size: 100%;
-	font-family: "Verdana", sans-serif;
-	line-height: 1.5em;
-	background-color: var(--bgcolor);
-	color: var(--txtcolor);
-	margin: auto;
+html,body{
+    font-size: 100%; /* Lascio libertà all'utente*/
+    font-family: "Verdana",sans-serif;
+    line-height: 1.5em;
+    margin:auto;
+    background-color: var(--bgcolor);
+    color:var(--txtcolor);
 }
-
-html{
-	background-image: url('images/bg.webp');
-	background-size: contain;
-}
-
 body{
-	max-width: 1024px;
-	border:  1px solid #000;
+    max-width: 1024px;
+    border: 1px solid var(--contentxtcolor);
+    background-color: var(--bgcolor);
 }
-
-/*
-==============
-SEZIONE HEADER
-==============
-*/
-
+html{
+    background-image: url("images/bg.webp");
+    background-size: contain; /* si adatta alla dimensione dello schermo*/
+}
+/*HEADER*/
 header{
+	color: var(--txtcolor);
 	text-align:  center;
 	padding:  1.0em;
 	padding-top: 0.7em;
-	margin: 0.7em;
+	margin: 0.5em;
+    border: 1px var(--contentxtcolor);
 	background: url('images/giannellipalleggio.jpg') right bottom no-repeat,
 				url('images/michielettocoppa.jpg') left bottom no-repeat;
 	background-size: 20%,20%;
+}
+
+header img{
+    padding-right: 4em;
 }
 
 header h1{
@@ -64,7 +60,7 @@ header h1{
 header h2{
 	font-size:  1.8em;
 	padding: 0.5em;
-	margin-top:  0.3em;
+	margin-top:  00.3em;
 }
 
 /*
@@ -78,7 +74,7 @@ SEZIONE BREADCRUMB
 	color: var(--txtcolor);
 	font-size: 1.1em;
 	padding: 0.5em 0em 0.5em 1.0em;
-	border:  1px solid #000;
+	border:  1px var(--contentxtcolor);
 }
 
 #breadcrumb a:link{
@@ -97,13 +93,17 @@ SEZIONE MENU
 
 #menu{
 	float: left;
-	width:  25%;
 	font-size:  1.3em;
 	padding:  0.8em;
+	width: 25%; /* la somma non deve fare 100 per gli effetti degli arrotondamenti */
 }
 
 #menu a:link{
 	color: var(--linkcolor);
+}
+
+#menu a:visited{
+	color: var(--visitedcolor);
 }
 
 #menu #currentlink{
@@ -111,17 +111,12 @@ SEZIONE MENU
 	background-repeat: no-repeat;
 	background-position: left center;
 	background-size: 1.2em;
-	text-indent: 1.5em;
-}
-
-#menu a:visited{
-	color: var(--visitedcolor);
+	padding-left: 1.5em;
 }
 
 #menu ul{
 	list-style-type: none;
 }
-
 
 #menu ul li{
 	margin-top: 0.5em;
@@ -129,35 +124,26 @@ SEZIONE MENU
 
 /*
 ==============
-SEZIONE NEWS
+SEZIONE ASIDE
 ==============
 */
 
-
 aside{
-	float:  right;
-	width:  20%;
-	border: 1px solid #000;
-	padding: 0.5em;
-	margin-top: 1.0em;
-	margin-right: 2%;
-	margin-left: 3%;
-	overflow: hidden;
-	background-color: var(--bgcolor);
-	color:  var(--txtcolor);
+    float:right;
+    width: 20%; 
+    padding: 0.5em;
+    margin:0.4em;
+    background-color: var(--bgcolor);
+    overflow: hidden;
 }
-
-aside h2 {
-	font-size: 1.2em;
-	background-color: var(--newscolor);
-	color:  var(--newstxtcolor);
-	padding: 0.2em;
+aside > h2{
+    background-color:var(--newscolor) ;
+    color:var(--contentxtcolor);
+    padding: 0.2em;
 }
-
 aside dl dd {
 	margin-left: 1.5em;
 }
-
 aside dt {
 	margin-left: 0.8em;
 	font-weight: bold;
@@ -165,65 +151,83 @@ aside dt {
 
 /*
 ==============
-SEZIONE CONTENUTO
+SEZIONE MAIN
 ==============
 */
 
 main{
-	margin-left:  28%;
-	color: var(--contentxtcolor);
- 	background-color: var(--contentbgcolor);
+	color:var(--newstxtcolor);
+	background-color: var(--contentbgcolor);
+	margin-left: 28%;
+	width: 66,5%;
+	padding: 1.75em;
+	border: 1px solid var(--contentxtcolor);  
 }
-
-main h1, h2{
+main h1{
+	padding: 0.7em;
+	padding-top: 00.1em;
 	text-align: center;
-	font-size: 2.5em;
-	padding: 1em;
+	line-height: 1.5em;
 }
-
-main>dl{
-	width: 95%;
-	margin: auto;
+main h2{
+	padding-top: 0.7em;
+	padding-bottom: 0.7em;
 }
 
 #giocatori>dt{
-	background-color: var(--breadcolor);
-	color: var(--txtcolor);
-	font-size: 1.1em;
-	padding: 0.5em;
-	border: 1px solid #000;
-	margin-top: 0.5em;
+    background-color: var(--breadcolor);
+    color: var(--txtcolor);
+    font-size: 1.1em;
+    padding: 0.5em;
+    border: 1px solid #000;
+}
+
+main>dl{
+    width: 95%;
+}
+
+#giocatori >dt{
+    margin-top: 1em;
 }
 
 #giocatori>dd{
-	border: 1px solid #000;
-	border-top: none;
-	padding: 0.5em;
-	margin-bottom: 0.5em;
+    border: 1px solid #000;
+    border-top: none; /*sennò ho un doppio bordo*/
+    padding: 0.5em;
 }
 
 #giocatori>dd img{
-	float: left;
-	width: 20%;
+    width:20%;
+    float: left;
 }
 
-
 #giocatori>dd dl{
-	margin-left: 25%;
+    margin-left: 24%;
 }
 
 .giocatore dt{
-	float: left;
+	float:left;
 	font-weight: bold;
 	padding-right: 0.5em;
 }
 
 .giocatore dt::after{
-	content: ": "; /*aggiunge i due punti dopo il nome del giocatore*/
+	content: ": ";
 }
 
 dt.riconoscimenti{
-	float: none; 
+	float:none;
+}
+
+.list li{
+    margin-left: 2em;
+}
+
+#de_giorgi{
+    width:35%;
+    float:left; 
+    padding: 1em;
+    border-radius: 0% 30% 30% 0%;
 }
 
 /*
@@ -233,12 +237,15 @@ SEZIONE FOOTER
 */
 
 footer{
-	background-color: var(--breadcolor);
-	color: var(--txtcolor);
+    background-color: var(--breadcolor);
+    color:var(--txtcolor);
+    text-align: center;
+    padding: 1.0em;  
+    border: 1px solid var(--contentxtcolor);   
 }
 
 footer p{
-	display: inline;
-	font-style: italic;
-	font-size: 0.8em;
+    display:inline;
+    font-style: italic;
+    font-size: 0.8em;
 }
