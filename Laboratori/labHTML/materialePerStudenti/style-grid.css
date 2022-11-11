@@ -35,25 +35,25 @@ GRID LAYOUT
 ==============
 */
 
-#homePage{
-    grid-template-areas: "h h h "
-                         "b b b "
-                         "m c n "
-                         "m c n "
-                         "f f f ";
-}
-
 body{
 	max-width: 1024px;
-    border: 1px solid var(--contentxtcolor);
-    background-color: var(--bgcolor);
-	display: grid;
-	grid-template-columns: 1fr 3fr 1fr;
-    grid-template-areas: "h h h "
-                         "b b b"
-                         "m c c"
-                         "m c c"
-                         "f f f ";
+	border:  1px solid var(--contentxtcolor);
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-areas: 
+    "h h"
+    "b b"
+    "m c"
+    "f f";
+}
+
+#homePage{
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas:
+        "h h h"
+        "b b b"
+        "m c n"
+        "f f f";
 }
 
 /*
@@ -68,15 +68,9 @@ header{
 	text-align:  center;
 	padding:  1.0em;
 	padding-top: 0.7em;
-	margin: 0.7em;
-	border: 1px solid var(--contentxtcolor);
 	background: url('images/giannellipalleggio.jpg') right bottom no-repeat,
 				url('images/michielettocoppa.jpg') left bottom no-repeat;
 	background-size: 20%,20%;
-}
-
-header img{
-    padding-right: 4em;
 }
 
 header h1{
@@ -107,7 +101,7 @@ SEZIONE BREADCRUMB
 	color: var(--txtcolor);
 	font-size: 1.1em;
 	padding: 0.5em 0em 0.5em 1.0em;
-	border:  1px var(--contentxtcolor);
+	border:  1px solid var(--contentxtcolor);
 }
 
 #breadcrumb a:link{
@@ -163,11 +157,14 @@ SEZIONE NEWS
 
 aside{
 	grid-area: n;
+	padding: 0.5em;
+	overflow: hidden;
 	background-color: var(--bgcolor);
 	overflow: hidden;
 }
 
 aside h2 {
+	font-size: 1.2em;
 	background-color: var(--newscolor);
 	color: var(--newstxtcolor);
 	padding: 0.2em;
@@ -192,8 +189,6 @@ main{
 	grid-area: c;
 	color: var(--contentxtcolor);
  	background-color: var(--contentbgcolor);
-   	padding: 1.75em;
-	border: 1px solid var(--contentxtcolor);  
 }
 
 main h1{
@@ -268,16 +263,14 @@ SEZIONE FOOTER
 */
 
 footer{
-	grid-area: f;
-	background-color: var(--breadcolor);
-	color: var(--txtcolor);
-	text-align: center;
-	padding: 0.5em;
-	border: 1px solid var(--contentxtcolor);  
+    grid-area: f;
+    background-color: var(--breadcolor);
+    color:var(--txtcolor);
+    text-align: center;
+    border: 1px solid var(--contentxtcolor);   
 }
-
 footer p{
-	display: inline;
-	font-style: italic;
-	font-size: 0.8em;
+    display:inline;
+    font-style: italic;
+    font-size: 0.8em;
 }

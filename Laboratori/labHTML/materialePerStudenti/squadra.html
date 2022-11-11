@@ -9,7 +9,9 @@
         giocatori, pallavolo, maschile, italia, nazionale italiana">
         <meta name="author" content="Gabriel Rovesti">
 
-        <link rel="stylesheet" href="style.css" media="screen">
+        <link rel="stylesheet" href="style-grid.css" media="screen"> <!-- handheld, screen -->
+        <link rel="stylesheet" href="print.css" media="print">
+        <link rel="stylesheet" href="mini.css" media="screen and (max-width:600px), only screen"> <!-- only screen and (max-device-width:600px), quest'ultimo deprecato e non valido -->
         <link rel="shortcut icon" type="image/png" href="images/favicon.ico">
     </head>
     <body>
@@ -40,7 +42,7 @@
                 <dd>
                     <img src="images/giannelli.jpg" alt="Simone Giannelli">
                     <dl class="giocatore">
-                        <dt>Data di nascita:</dt>
+                        <dt>Data di nascita</dt>
                         <dd><time datetime="1996-08-09">09/08/1996</time></dd>
                         <dt>Luogo</dt>
                         <dd>Bolzano</dd>
@@ -487,9 +489,9 @@
             </table>
         </main>
         <footer>
-            <p><img src="images/valid-xhtml10.png" alt="W3C html valido"></p>
+            <img class="imgValidCode" src="images/valid-xhtml10.png" alt="W3C html valido">
             <p><em>Gabriel Rovesti &amp; <!-- per fare l'& --> Federazione Italiana Pallavolo - <span lang="en">All rights Reserved</span></em></p>
-            <p><img src="images/vcss-blue.gif" alt="W3C html valido"></p>    
+            <img class="imgValidCode" src="images/vcss-blue.gif" alt="W3C html valido">    
         </footer>
     </body>
 </html>
