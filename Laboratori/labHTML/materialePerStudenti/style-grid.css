@@ -189,6 +189,11 @@ main{
 	grid-area: c;
 	color: var(--contentxtcolor);
  	background-color: var(--contentbgcolor);
+	padding: 1.0em;
+}
+
+main li{
+	margin-left: 1.5em;
 }
 
 main h1{
