@@ -1,112 +1,76 @@
 <!DOCTYPE html>
 <html lang="it">
-    <head>
-        <meta charset="utf-8">
-        <title>Volley Tribute</title>
-        <meta name="description" content="Questa pagina e' dedicata
-        al campionato mondiale di pallavolo maschile 2022. Nel sito sono
-        descritti i giocatori, l'allenatore e alcune regole come il fairplay">
-        <meta name="keywords" content="pallavolo, volley, maschile, campionato, mondiale,
-        Simone Giannelli, Fabio Balaso, Gianluca Galassi, Lavia">
-        <meta name="author" content="Gabriel Rovesti">
-
-        <!-- Non mettere "handheld" come diceva la prof, è deprecato in realtà -->
-        <link rel="stylesheet" href="style-grid.css" media="screen"> <!-- handheld, screen -->
-        <link rel="stylesheet" href="print.css" media="print">
-        <link rel="stylesheet" href="mini.css" media="screen and (max-width:600px), only screen"> <!-- only screen and (max-device-width:600px), quest'ultimo deprecato e non valido -->
-        <link rel="shortcut icon" type="image/png" href="images/favicon.ico">
-    </head>
-    
-    <body id="homePage">
-    <header>
-        <h1>Federazione Italiana Pallavolo</h1>
+<head>
+	<meta charset="utf-8">
+	<title>Volley Tribute</title>
+	<meta name="description" content="Questa pagina è dedicata al campionata mondiale di pallavolo maschile 2022. Nel sito sono descritti i giocatori, l'allenatore e alcune regole e curiosità come il fairplay.">
+	<meta name="keyword" content="pallavolo, maschile, Italia, campionato, mondiale, Simone Giannelli, Gianluca Galassi, Fabio Balaso, Lavia">
+	<meta name="author" content="Gabriel Rovesti">
+    <!--mini e print sono file di esempio-->
+    <link rel="stylesheet" href="styleGrid.css" media="screen"> <!--handheld per i cellulari-->
+    <link rel="stylesheet" href="mini.css" media ="screen and (max-width:600), only screen" /> <!--applicato su finestre o device di dimensione inferiore ai 300px, in questo caso viene applicato anche style.css-->
+    <link rel="stylesheet" href="print.css" media="print"> <!--solo per le stampnte e applica solo questo stylesheet-->
+    <link rel="shortcut icon" type="images/png" href="images/favicon.ico">
+</head>
+<body id="homepage">
+	<header>
+        <h1>Federazione Italiana Pallavolo</h1> <!--Image replacment-->
         <h2>La pallavolo maschile italiana</h2>
-    </header>
-
+	</header>
     <nav id="breadcrumb">
-        <p>
-            Ti trovi in: <span lang="en">Home</span>
-        </p>
+        <p>Ti trovi in: <span lang="en">Home</span></p> <!--Si utilizza lo span per lo screen reader-->
     </nav>
-
     <nav id="menu">
         <ul>
-            <li id="currentlink"><span lang="en">Home</span></li> <!--la keyword id, in questo caso serve per css per posizionare un pallone da pallavolo di fianco-->
+            <li id="currentlink" lang="en">Home</li> <!--la keyword id, in questo caso serve per css per posizionare un pallone da pallavolo di fianco-->
             <li><a href="allenatore.html">L'allenatore</a></li>
-            <li><a href="squadra.html">La squadra</a></li>   
-            <li><a href="fairplay.html">Il <span lang="en">fairplay</span></a></li>        
+            <li><a href="squadra.html">La squadra</a></li>
+            <li><a href="fairplay.html">Il <span lang="en">fairplay</span></a></li>
         </ul>
     </nav>
-
     <aside>
         <h2>Ultime <span lang="en">news</span></h2>
         <dl>
-            <dt> <time datetime="2022-10-02">2 ottobre 2022</time></dt>
+            <dt><time datetime="2022-10-02">2 ottobre 2022</time></dt>
             <dd>Italia femminile vince la partita del girone di prima fase contro i Paesi Bassi a <span lang="nl">Arnhem</span></dd>
-            <dt> <time datetime="2022-09-29">29 settembre 2022</time></dt>
+            <dt><time datetime="2022-09-29">29 settembre 2022</time></dt>
             <dd>Italia femminile vince la partita del girone di prima fase contro il Kenya a <span lang="nl">Arnhem</span></dd>
-            <dt> <time datetime="2022-09-11">11 settembre 2022</time></dt>
+            <dt><time datetime="2022-09-11">11 settembre 2022</time></dt>
             <dd>Italia maschile vince la finale contro la Polonia a <span lang="pl">Katowice</span></dd>
-            <dt> <time datetime="2022-09-10">10 settembre 2022</time></dt>
+            <dt><time datetime="2022-09-10">10 settembre 2022</time></dt>
             <dd>Italia maschile vince la semifinale contro la Slovenia a <span lang="pl">Katowice</span></dd>
-        </dl>            
-    </aside>      
-
-    <main>
+        </dl><!--definition list-->
+    </aside>
+	<main>
         <h1>Campionato mondiale di pallavolo maschile 2022</h1>
-
-        <p>
-            Il campionato mondiale di pallavolo maschile 2022 si è svolto dal 26 agosto all'11 settembre
-            2022 a <span lang="pl">Gliwice</span> e <span lang="pl">Katowice</span>, in Polonia, e a <span lang="si">Lubiana</span>, in Slovenia. Originariamente prevista in
-            Russia, la competizione è stata spostata a seguito dell'invasione russa dell'Ucraina. 
-        </p>
-        <p>
-            Al torneo hanno partecipato ventiquattro squadre nazionali. L’ultimo giorno sul podio sono
-            salite l'<strong>Italia</strong> (vincitrice per la quarta volta), seguita dalla Polonia e dal Brasile. L’Italia, inoltre,
-            vanta anche: 
-        </p>  
-            <dl>
-                <dt>il premio <span lang="en"><abbr><strong>MVP (Most Valuable Player)</strong></abbr></span></dt>
-                <dd> che è stato consegnato a <strong>Simone Giannelli</strong>, capitano e regista della nostra nazionale, proprio l’ultima sera del campionato;</dd>
-                <dt>il premio di <strong>miglior palleggiatore</strong></dt>
-                <dd>sempre consegnato a <strong>Simone Giannelli</strong>;</dd>
-                <dt>il premio di <strong>miglior centrale</strong></dt>
-                <dd>vinto da <strong>Fabio Balaso</strong>;</dd>
-            </dl> 
-
-        <p>
-            Inoltre,lo schiacciatore italiano <strong>Daniele Lavia</strong> è arrivato terzo per quanto riguarda 
-            sia il rendimento individuale sia il numero di attacchi vincenti.
-        </p>
-
-        <p>
-            Il campionato è stato giocato in due fasi:
-        </p>
-            <ul>
-                <li>una prima fase a gironi, disputata con girone all'italiana: le prime due classificate di
-                    ogni girone e le quattro migliori terze hanno acceduto alla fase finale.</li>
-                <li>la fase finale, disputata con ottavi di finale, quarti di finale, semifinali, finale per il
-                    terzo posto e finale.</li>
-            </ul>
-        <p>
-            La classifica è stata stilata in base ai criteri che vengono utilizzati per tutte le tipologie di
-            campionato di pallavolo, ovvero:
-        </p>
-            <ul>
-                <li> 
-                    se il risultato finale è di 3-0 o 3-1 vengono assegnati 3 punti
-                    alla squadra vincente e 0 a quella sconfitta;
-                </li>
-                <li>
-                    se il risultato finale è di 3-2 vengono assegnati 2
-                    punti alla squadra vincente e 1 a quella sconfitta.;
-                </li>
-            </ul>
-    </main>
-    <footer>
-        <img class="imgValidCode" src="images/valid-xhtml10.png" alt="W3C html valido">
-        <p><em>Gabriel Rovesti &amp; <!-- per fare l'& --> Federazione Italiana Pallavolo - <span lang="en">All rights Reserved</span></em></p>
-        <img class="imgValidCode" src="images/vcss-blue.gif" alt="W3C html valido">    
-    </footer>
-    </body>
+        <p>Il campionato mondiale di pallavolo maschile 2022 si è svolto dal 26 agosto all'11 settembre 2022 a <span lang="pl">Gliwice</span> e <span lang="pl">Katowice</span>, in Polonia, e a Lubiana, in Slovenia. Originariamente prevista in Russia, la competizione è stata spostata a seguito dell'invasione russa dell'Ucraina.</p>
+        <p>Al torneo hanno partecipato ventiquattro squadre nazionali. L’ultimo giorno sul podio sono salite l’<strong>Italia</strong> (vincitrice per la quarta volta), seguita dalla Polonia e dal Brasile. L’Italia, inoltre, vanta anche:</p>
+        <dl>
+            <dt>il premio <strong><span lang="en">MVP (Most Valuable Player)</span></strong></dt>
+            <dd>che è stato consegnato a <strong>Simone Giannelli</strong>, capitano e regista della nostra nazionale, proprio l’ultima sera del campionato;</dd>
+            <dt>il premio di <strong>miglior palleggiatore</strong></dt>
+            <dd>sempre consegnato a <strong>Simone Giannelli</strong>;</dd>
+            <dt>il premio di <strong>miglior centrale</strong></dt>
+            <dd>vinto da <strong>Gianluca Galassi</strong>;</dd>
+            <dt>il premio di <strong>miglior libero</strong></dt>
+            <dd>vinto da <strong>Fabio Balaso</strong>.</dd>
+        </dl>
+        <p>Inoltre, lo schiacciatore italiano <strong>Daniele Lavia</strong> è arrivato terzo per quanto riguarda sia il rendimento individuale sia il numero di attacchi vincenti.</p>
+        <p>Il campionato è stato giocato in due fasi:</p>
+        <ul class="list">
+            <li>una prima fase a gironi, disputata con girone all'italiana: le prime due classificate di ogni girone e le quattro migliori terze hanno acceduto alla fase finale;</li>
+            <li>la fase finale, disputata con ottavi di finale, quarti di finale, semifinali, finale per il terzo posto e finale.</li>
+        </ul>
+        <p>La classifica è stata stilata in base ai criteri che vengono utilizzati per tutte le tipologie di campionato di pallavolo, ovvero</p>
+        <ul class="list">
+            <li>se il risultato finale è di 3-0 o 3-1 vengono assegnati 3 punti alla squadra vincente e 0 a quella sconfitta;</li>
+            <li>se il risultato finale è di 3-2 vengono assegnati 2 punti alla squadra vincente e 1 a quella sconfitta.</li>
+        </ul>
+	</main>
+	<footer>
+        <p><img src="images/valid-xhtml10.png" alt="W3C html valido"></p>
+        <p><em>Gabriel Rovesti &amp; Federazione Italiana Pallavolo - <span lang="en">All rights Reserved</span></em></p>
+        <p><img src="images/vcss-blue.gif" alt="W3C css valido"></p>
+	</footer>
+</body>
 </html>

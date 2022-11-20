@@ -4,34 +4,30 @@ header{
 
 header h1{
     line-height: 1em;
-    font-size: 4em;
+    font-size: 4m;
 }
 
 #menu{
-    float:none;
-    width:90%;
+    float: none;
+    width: 90%;
     padding-top: 0.5em;
 }
 
 aside{
-	float: none;
+    float: none;
     width: auto;
     margin: 0em;
     padding: 0.3em;
 }
 
 main{
-    margin-left: 0em;
-}
-
-footer{
-    display: flex;
-}
-
-footer img{
-    width: 20%;
+    margin-left: 0em; /*lo zero può non avere una unità di misura*/
 }
 
 footer .imgValidCode{
     width: 20%;
+}
+
+footer{
+    display: flex;
 }
