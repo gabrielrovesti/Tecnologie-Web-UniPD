@@ -1,0 +1,17 @@
+Su Windows:
+
+Scaricarsi Putty/Filezilla
+Entrando su Putty, si inserisco come host "tecweb.studenti.math.unipd.it" e si clicca "Open"
+Fatto questo, si inseriscono le credenziali di laboratorio
+(inizialenomecognome) --> Caso mio (Gabriel Rovesti -> grovesti)
+(password laboratori)
+
+Fatto questo, dentro il server si trova:
+Un file di testo con le credenziali di accesso al Database locale ->  pwd_db_2022-23.txt 
+Le sessioni in PHP -> php_sessione
+La directory "public_html" in cui dovrete inserire il vostro sito web
+I file di log e configurazione utente
+
+Video di riferimento per fare tunnel SSH:
+https://stem.elearning.unipd.it/mod/kalvidres/view.php?id=196166
+

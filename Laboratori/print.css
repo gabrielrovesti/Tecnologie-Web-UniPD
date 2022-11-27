@@ -1,0 +1,175 @@
+*{
+    padding: 0em;
+    margin: 0em;
+}
+
+html,body{
+    font-size: 12pt; /* evitare % preferire punti o cm */
+    font-family: "Times New Roman",serif; /* con grazie*/
+    line-height: 1.5em; /*è bene tenerla */
+    margin:auto;
+}
+
+/*HEADER*/
+header{
+    text-align: center;
+    padding: 1.0em 0.0em 1.0em 0.0em;
+    margin-top:0.5em;
+    margin-bottom:0.5em;
+}
+/*
+header img{
+    padding-right: 4em;
+}
+*/
+/*Essendo un SVG è normale non venga visualizzato; io lo tolgo per non avere lo spazio bianco in stampa*/
+
+/*
+header h1{
+    content: url("images/logo_fipav.svg"); 
+    font-size: 6em;
+    line-height: 1.5em;
+}
+*/
+
+header h2{
+    font-size: 1.2em;
+    padding: 0.5em;
+    margin-top: 0.3em;
+}
+
+#breadcrumb{ /*direi che la breadcrumb è inutile in stampa, tolgo*/
+    display:none;
+    font-size: 1.1em;
+    padding: 0.5em 0em 0.5em 1em;
+}
+
+/*MENU*/
+
+#menu{
+   display: none;
+}
+
+/*ASIDE*/
+
+aside{
+    float:right;
+    width: 20%; 
+    padding: 0.8em;
+    margin:1.5em;
+    border:1px solid #000;
+}
+
+aside > h2{
+    padding: 0.2em;
+}
+
+aside dl dd {
+	margin-left: 1.5em;
+}
+
+aside dt {
+	margin-left: 0.8em;
+	font-weight: bold;
+}
+
+/*MENU*/
+main{
+   text-align: justify;
+   width: auto;
+   padding: 1.75em;
+   border: 1px solid;  
+}
+.aiuti{ /*per gli aiuti, ma non credo serva in stampa, tolgo*/
+    display:none;
+}
+
+main h1{
+ font-size: 2.3em;
+ padding: 0.7em;
+ padding-top: 0.1em;
+ margin-bottom: 1em;
+ text-align: center;
+ line-height: 1.5em;
+}
+
+main h2{
+    font-size: 1.8em;
+    padding: 1em 0em;
+}
+
+#giocatori>dt{
+    font-size: 1.1em;
+    padding: 0.5em;
+    border: 1px  ;
+}
+
+main>dl{
+    width: 95%;
+}
+
+#giocatori >dt{
+    margin-top: 1em;
+}
+
+#giocatori>dd{
+    border: 1px  ;
+    border-top: none; /*sennò ho un doppio bordo*/
+    padding: 0.5em;
+}
+
+#giocatori>dd img{
+    width:20%;
+    float: left;
+}
+
+#premi dt{
+    padding-left: 1.3em;/* margin non è coperto da sfondo*/
+    background-size: 1.2em;
+}
+
+#premi dd{
+    margin-left: 1.3em;
+}
+
+#premi{
+    margin-left: 2em;
+}
+
+#giocatori>dd dl{
+    margin-left: 24%;
+}
+
+.giocatore dt{
+   float:left;
+   font-weight: bold;
+   padding-right: 0.5em;
+}
+
+.giocatore dt::after{
+    content: ": ";
+}
+
+dt.Riconoscimenti{
+    float:none;
+}
+
+.list li{
+    margin-left: 2em;
+}
+
+#de_giorgi{
+    width:35%;
+    float:left; 
+    padding: 1em;
+    border-radius: 0% 30% 30% 0%;
+}
+
+/*FOOTER*/
+
+footer{
+    display: none;
+    text-align: center;
+    padding: 1.0em;  
+    border: 1px ;   
+}

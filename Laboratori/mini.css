@@ -1,0 +1,61 @@
+header{
+    background: none;
+}
+
+header h1{
+    line-height: 1em;
+    font-size: 4em;
+}
+
+#menu{
+    float: none;
+    width: 90%;
+    padding-top: 0.5em;
+}
+
+main{
+    margin-left: 0em;
+}
+
+aside{
+    float: none;
+    width: auto; 
+    margin: 0em;
+    padding: 0.3em;
+}
+
+footer img{
+    width: 20%;
+}
+
+footer{
+    display: flex;
+}
+
+thead,tfoot{
+    display:none;
+}
+
+tr,th,td{
+    display: block;
+    padding: 0;
+    white-space: normal;
+}
+
+th[data-title]:before,td[data-title]:before{
+    content: attr(data-title) ":\00A0";
+    font-weight: bold;
+}
+
+th{
+    background-color: var(--breadcolor);
+    color: #FFF;
+}
+
+td,th{
+    border-top: none;
+}
+
+tr:first-child{
+    border:1px solid #000;
+}
