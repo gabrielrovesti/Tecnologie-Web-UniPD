@@ -6,15 +6,17 @@
         <meta name="description" content="Questa pagina è dedicata al campionata mondiale di pallavolo maschile 2022. Nel sito sono descritti i giocatori, l'allenatore e alcune regole e curiosità come il fairplay.">
         <meta name="keyword" content="pallavolo, maschile, Italia, campionato, mondiale, Simone Giannelli, Gianluca Galassi, Fabio Balaso, Lavia">
         <meta name="author" content="Gabriel Rovesti">
-        <link rel="stylesheet" href="style-grid.css" media="screen"> <!-- handheld è deprecato --> 
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+        <link rel="stylesheet" href="style-grid.css" media="handheld,screen"> <!-- handheld è deprecato --> 
         <link rel="shorcut icon" type="images/png" href="images/favicon.ico">
         <link rel="stylesheet" href="print.css" media="print"> <!--riparto da capo -->
-        <link rel="stylesheet" href="mini.css" media="only screen"><!-- (max-device-width:600px) è deprecato --> 
+        <!-- Mobile CSS-->
+        <link rel="stylesheet" href="styles/mobile.css" media="only screen and (min-width: 600px) and (max-width:768)">
     </head>
     <body id="Homepage">
         <header>
-            <h1>
-                FEDERAZIONE ITALIANA PALLAVOLO
+            <h1> <!-- Realizzo un image replacement piazzando l'immagine e poi nascondendo lo span contenitore -->
+                <span>FEDERAZIONE ITALIANA PALLAVOLO</span>
             </h1>
             <h2>
                 La pallavolo maschile italiana
@@ -29,7 +31,7 @@
         <a class="aiuti" href="#news">Salta alle Ultime Notizie</a>
         <nav id="menu" aria-label="menu del sito"> <!-- menù del sito -->
             <ul>
-                <li id="currentLink" lang="en">
+                <li id="currentLink" lang="en" aria-current="page">
                     Home
                 </li>
                 <li>

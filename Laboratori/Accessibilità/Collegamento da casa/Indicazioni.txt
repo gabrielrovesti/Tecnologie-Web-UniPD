@@ -1,0 +1,7 @@
+Da un qualsiasi client ssh (anche la shell cmd di windows) scrivere la seguente stringa:
+
+ssh username@sshpaolotti.studenti.math.unipd.it -L11080:tecweb:8123 
+
+sostituendo alla stringa username il vostro username.
+
+A questo punto per collegarsi via browser http://localhost:11080/pathDegliEsempi.

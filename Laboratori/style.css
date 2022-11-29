@@ -42,7 +42,7 @@ header{
     padding: 1em;
     padding-top: 0.7em;
     margin: 0.5em;
-    border: 1px   var(--contentxtcolor);
+    border: 1px var(--contentxtcolor);
     background: url("images/giannellipalleggio.jpg") right bottom no-repeat,
                 url("images/michielettocoppa.jpg") left top no-repeat;
     background-size: 20%,20%;
@@ -139,7 +139,7 @@ aside dt {
 	font-weight: bold;
 }
 
-/*MENU*/
+/*MAIN*/
 main{
    color:var(--newstxtcolor);
    background-color: var(--contentbgcolor);
@@ -233,6 +233,17 @@ dt.Riconoscimenti{
     border-radius: 0% 30% 30% 0%;
 }
 
+.aiuti { /*Per saltare al contenuto, lo piazziamo fuori dallo schermo*/
+    left: 50%;
+    position: absolute;
+    transform: translateY(-100%);
+}
+
+.aiuti #dTable{
+    display: none;
+}
+
+
 /*FOOTER*/
 
 footer{
@@ -249,7 +260,8 @@ footer p{
     font-size: 0.8em;
 }
 
-thead{
+thead, tfoot{
     color:#fff;
     background-color: black;
 }
+

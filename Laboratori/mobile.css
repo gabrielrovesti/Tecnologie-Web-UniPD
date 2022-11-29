@@ -1,0 +1,159 @@
+/*Mobile Version*/
+
+*{
+    padding: 0em;
+    margin: 0em;
+    box-sizing: border-box;
+}
+
+html,body{
+    font-size: 12pt; /* evitare % preferire punti o cm */
+    font-family: "Times New Roman",serif; /* con grazie*/
+    line-height: 1.5em; /*è bene tenerla */
+    margin:auto;
+}
+
+/*HEADER*/
+
+header{
+    text-align: center;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+header h1{
+    content: url("images/logo_fipav.svg"); 
+    font-size: 6em;
+    line-height: 1.5em;
+    width: 100%;
+    height: 100%;
+}
+
+header h1 span {
+    display:block;
+    height:0;
+    overflow:hidden;
+}
+
+#breadcrumb{
+    font-size: 1.0em;
+    display: flex;
+    padding: 0.5em 0em 0.5em 1em;
+}
+
+/*MENU*/
+
+.nav#menu{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #000;
+    font-size: 1.5em;
+}
+
+.nav#menu ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+.nav#menu li{
+    float: left;
+    display: block;
+    padding: 0.5em 0.5em 0.5em 0.5em;
+}
+
+.nav#menu li a{
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 0.5em 0.5em 0.5em 0.5em;
+    text-decoration: none;
+}
+
+.nav#menu li a:hover{
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/*ASIDE*/
+
+aside#news{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #000;
+    font-size: 1.5em;
+}
+
+aside#news ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+aside#news li{
+    float: left;
+    display: block;
+    padding: 0.5em 0.5em 0.5em 0.5em;
+}
+
+/*MENU*/
+
+thead, tfoot{
+    display: none;
+}
+
+#news{
+    padding: 3%;
+    background-color: #FFCC00;
+}
+
+#news ul{
+    list-style-type: none;
+}
+
+#news li {
+    background-color: white;
+    border: solid;
+    margin-top: 2%;
+    padding: 2%;
+}
+
+tr, th, td {
+    display: block;
+    padding: 0;
+    white-space: normal;
+}
+
+th[data-title]:before, td[data-title]:before {
+    content: attr(data-title) ":\00A0";
+    font-weight: bold;
+}
+
+th{
+    background-color: #BD091B;
+    color: #FFF;
+}
+td,th {
+    border-top:none;
+}
+tr:first-child {
+    border: 1px solid #000;
+}
+
+/*FOOTER*/
+
+footer{
+    padding:1em;
+    margin-top:1em;
+    border: 1px solid black;
+}
+
