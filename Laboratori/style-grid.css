@@ -159,17 +159,17 @@ aside dt {
 
 main{
     grid-area: c;
-   color:var(--newstxtcolor);
-   background-color: var(--contentbgcolor);
-   padding: 1.75em;
-   border: 1px solid var(--contentxtcolor);  
+    color:var(--newstxtcolor);
+    background-color: var(--contentbgcolor);
+    padding: 1.75em;
+    border: 1px solid var(--contentxtcolor);  
 }
 
 main h1{
- padding: 0.7em;
- padding-top: 00.1em;
- text-align: center;
- line-height: 1.5em;
+    padding: 0.7em;
+    padding-top: 00.1em;
+    text-align: center;
+    line-height: 1.5em;
 }
 
 main h2{
@@ -207,9 +207,13 @@ main>dl{
 #premi dt{
     background-image: url("images/favpng_volleyball-icon.png");
     background-repeat: no-repeat;
-    background-position: left ;
+    background-position: left;
     padding-left: 1.3em;
     background-size: 1.2em;
+}
+
+.giocatore dt{
+    font-size: 1.2em;
 }
 
 #premi dd{
@@ -266,16 +270,16 @@ footer p{
 }
 
 .aiuti{
-position: absolute;
-height: 1px;
-width: 1px;
-overflow: hidden;
-clip: rect(1px, 1px, 1px, 1px);
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
 }
 
 thead,tfoot{
-background-color: var(--breadcolor);
-color: #FFF;
+    background-color: var(--breadcolor);
+    color: #FFF;
 }
 
 table, th, td {
