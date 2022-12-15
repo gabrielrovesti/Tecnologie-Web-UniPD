@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            Inserimento giocatori - Volley Tribute
+        </title>
+        <meta name="description" content="Questa pagina è dedicata all'inserimento di giocatori per la squadra di pallavolo">
+        <meta name="keyword" content="Simone Giannelli, Gianluca Galassi, Fabio Balaso, Lavia,Michieletto, giocatori pallavolo,maschile,italia,nazionale italiana">
+        <meta name="author" content="Gabriel Rovesti">
+        <link rel="stylesheet" href="style-grid.css" media="screen"> <!-- handheld è deprecato --> 
+        <link rel="shorcut icon" type="images/png" href="images/favicon.ico">
+        <link rel="stylesheet" href="print.css" media="print"> <!--riparto da capo -->
+        <link rel="stylesheet" href="mini.css" media="only screen"><!-- (max-device-width:600px) è deprecato -->  
+    </head>
+    <body>
+        <header>
+            <h1>
+                FEDERAZIONE ITALIANA PALLAVOLO
+            </h1>
+            <h2>
+                La pallavolo maschile italiana
+            </h2>
+        </header>
+        <nav id="breadcrumb">
+            <p>
+                Ti trovi in: <a href="index.html"><span lang="en">Home</span></a> &gt; &gt; Inserimento giocatori
+            </p>
+        </nav>
+        <a class="aiuti" href="#contenuto">Salta al contenuto</a>
+        <nav id="menu">
+            <ul>
+                <li lang="en"> 
+                    <a href="index.html">Home</a>
+                </li>
+                <li >
+                    <a href="allenatore.html">L'allenatore</a>
+                </li>
+                <li>
+                    <a href="squadra.html">La squadra</a>
+                </li>
+                <li>
+                    <a href="fairplay.html">Il <span lang="en">fair play</span></a>
+                </li>
+                <li id="currentLink">
+                    <a href="inserimento_giocatori.html">Inserimento giocatori</a>
+                </li>
+            </ul>
+        </nav>
+        <main id="#contenuto">
+            <form class="insert-players">
+                <fieldset id="content-container">
+                    <legend>Dati utili</legend>
+                    <div><label for="Capitano" id="voice">Capitano?</label></div>
+                    <div><input type="radio" name="yes" value="1" id="voice" /> <strong>Sì</strong></div>
+                    <div><input type="radio" name="nope" value="2" id="voice" /> <strong>No</strong></div>
+                    
+                    <label for="data" id="voice">Data di Nascita</label>
+                    <input type="date" id="data" name="data">
+                    
+                    <label for="luogo" id="voice">Luogo di Nascita</label>
+                    <input type="text" id="luogo" name="luogo" placeholder="Luogo">
+
+                    <label for="altezza" id="voice">Altezza</label>
+                    <input type="text" id="altezza" name="altezza" placeholder="Altezza">
+                </fieldset>
+
+                <fieldset id="content-container">
+                    <legend>Squadra</legend>
+                    <label for="squadra" id="voice">Squadra in campionato</label>
+                    <input type="text" id="squadra" name="squadra" placeholder="Squadra">
+
+                    <label for="altezza" id="voice">Altezza</label>
+                    <input type="text" id="altezza" name="altezza" placeholder="Altezza">
+                </fieldset>
+
+                <fieldset id="content-container">
+                    <legend>Nazionale</legend>
+                    <label for="ruolo" id="voice">Ruolo</label>
+                    <input type="text" id="ruolo" name="ruolo" placeholder="Ruolo">
+
+                    <label for="maglia" id="voice">Maglia</label>
+                    <input type="text" id="maglia" name="maglia" placeholder="Maglia">
+                </fieldset>
+
+                <fieldset id="content-container">
+                    <legend>Carriera</legend>
+                    <label for="punti_ricezioni" id="voice">Punti/ricezioni</label>
+                    <input type="text" id="punti_ricezioni" name="punti_ricezioni" placeholder="Punti/ricezioni">
+
+                    <label for="riconoscimenti" id="voice">Riconoscimenti</label>
+                    <textarea id="riconoscimenti" name="riconoscimenti"></textarea>
+
+                    <label for="note" id="voice">Note</label>
+                    <textarea id="note" name="note"></textarea>
+                </fieldset>
+                
+            </form>
+        </main>
+        <footer>
+            <img src="images/valid-xhtml10.png" alt="W3C html valido">
+            <em>Gabriel Rovesti &amp; Federazione Italiana Pallavolo - <span lang="en">All rights Reserved</span></em>
+            <img src="images/vcss-blue.gif" alt="W3C css valido">
+        </footer>
+    </body>
+</html>

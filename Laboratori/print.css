@@ -17,20 +17,25 @@ header{
     margin-top:0.5em;
     margin-bottom:0.5em;
 }
-/*
+
 header img{
     padding-right: 4em;
 }
-*/
-/*Essendo un SVG è normale non venga visualizzato; io lo tolgo per non avere lo spazio bianco in stampa*/
 
-/*
 header h1{
     content: url("images/logo_fipav.svg"); 
     font-size: 6em;
     line-height: 1.5em;
+    width: 100%;
+    height: 100%;
 }
-*/
+
+header h1 span {
+    display:block;
+    height:0;
+    overflow:hidden;
+}
+    
 
 header h2{
     font-size: 1.2em;

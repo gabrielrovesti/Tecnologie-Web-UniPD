@@ -253,6 +253,33 @@ dt.Riconoscimenti{
     border-radius: 0% 30% 30% 0%;
 }
 
+.insert-players{
+    margin-top: 0.5em;
+    margin-bottom: 1.2em;
+    font-size: 1.2em;
+}
+
+.insert-players #content-container{
+    border-radius: 1px;
+    border: 1px solid black;
+    margin: 1em;
+}
+
+label {
+    float:left;
+    text-align: right;
+
+}
+
+input {
+    margin-left: 1em;
+    margin-bottom: 1em;
+}
+
+.insert-players #voice{
+    font-weight: bold;
+}
+
 /*FOOTER*/
 
 footer{

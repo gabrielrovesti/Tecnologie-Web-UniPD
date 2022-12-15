@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            La squadra - Volley Tribute
+        </title>
+        <meta name="description" content="Questa pagina è dedicata al campionato mondiale di pallavolo maschile 2022. Nel sito è descritta la struttura della squadra">
+        <meta name="keyword" content="Simone Giannelli, Gianluca Galassi, Fabio Balaso, Lavia,Michieletto, giocatori pallavolo,maschile,italia,nazionale italiana">
+        <meta name="author" content="Gabriel Rovesti">
+        <link rel="stylesheet" href="style-grid.css" media="screen"> <!-- handheld è deprecato --> 
+        <link rel="shorcut icon" type="images/png" href="images/favicon.ico">
+        <link rel="stylesheet" href="print.css" media="print"> <!--riparto da capo -->
+        <link rel="stylesheet" href="mini.css" media="only screen"><!-- (max-device-width:600px) è deprecato -->  
+    </head>
+    <body>
+        <header>
+            <h1>
+                FEDERAZIONE ITALIANA PALLAVOLO
+            </h1>
+            <h2>
+                La pallavolo maschile italiana
+            </h2>
+        </header>
+        <nav id="breadcrumb" aria-label="breadcrumb">
+            <p>
+                Ti trovi in: <span lang="en"> <a href="index.html">Home</a></span> &gt; &gt; La Squadra
+            </p>
+        </nav>
+        <a class="aiuti" href="#contenuto">Salta al contenuto</a>
+        <a class="aiuti" href="#dTable">Salta alla squadra</a>
+        <nav id="menu">
+            <ul>
+                <li lang="en">
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="allenatore.html">L'allenatore</a>
+                </li>
+                <li id="currentLink" aria-current="page">
+                    La squadra
+                </li>
+                <li>
+                    <a href="fairplay.html">Il <span lang=en>fair play</span></a>
+                </li>
+                <li>
+                    <a href="inserimento_giocatori.html">Inserimento giocatori</a>
+                </li>
+            </ul>
+        </nav>
+        <main id="#contenuto">
+            <h1>La squadra</h1>
+            <listaGiocatori /> <!-- Rappresenta un segnaposto -->
+        </main>
+        <footer id="footer">
+            <img src="images/valid-xhtml10.png" alt="W3C html valido">
+            <em>Gabriel Rovesti &amp; Federazione Italiana Pallavolo - <span lang="en">All rights Reserved</span></em>
+            <img src="images/vcss-blue.gif" alt="W3C css valido">
+        </footer>
+    </body>
+    </html>
+<!--
+    xhtml: header/nav/footer diventano div, doctype,charset, ripete  il meta title, e il meta language, invce che lang diventa xml::lang
+-->

@@ -15,7 +15,6 @@
     </head>
     <body>
         <header>
-            <!-- here you must do a imahge replacement -->
             <h1>
                 FEDERAZIONE ITALIANA PALLAVOLO
             </h1>
@@ -23,19 +22,18 @@
                 La pallavolo maschile italiana
             </h2>
         </header>
-        <nav id="breadcrumb">
+        <nav id="breadcrumb" aria-label="breadcrumb">
             <p>
                 Ti trovi in: <a href="index.html"><span lang="en">Home</span></a> &gt; &gt; L'allenatore
             </p>
         </nav>
-        <!--Il pallone da pallavolo lo aggiungerò con un servizio css quindi mi serve un id al primo elemento-->
         <a class="aiuti" href="#contenuto">Salta al contenuto</a>
         <nav id="menu">
             <ul>
                 <li lang="en"> <!--Non metto link per non creare perdita di cognizione nell'utente finale-->
                     <a href="index.html">Home</a>
                 </li>
-                <li id="currentLink">
+                <li id="currentLink" aria-current="page">
                     L'allenatore
                 </li>
                 <li>
@@ -43,6 +41,9 @@
                 </li>
                 <li>
                     <a href="fairplay.html">Il <span lang=en>fair play</span></a>
+                </li>
+                <li>
+                    <a href="inserimento_giocatori.html">Inserimento giocatori</a>
                 </li>
             </ul>
         </nav>
