@@ -1,0 +1,17 @@
+Da un qualsiasi client ssh (anche la shell cmd di Windows, uguale da terminale Linux) scrivere la seguente stringa:
+ssh grovesti@sshpaolotti.studenti.math.unipd.it -L8080:tecweb:80 -L8022:tecweb:22
+
+Fatto questo, si può aprire un browser, in questo caso con:
+http://localhost:8080/
+
+Per accedere a PhpMyAdmin:
+http://localhost:8080/phpmyadmin/
+
+Per collegarsi su Filezilla:
+Host: sftp://localhost
+Nome utente: grovesti
+Password: (quella)
+Porta: 8022
+
+In questo modo, si vedono in chiaro sul server le credenziali
+per accedere al DB.

@@ -39,63 +39,93 @@
                 <li>
                     <a href="squadra.html">La squadra</a>
                 </li>
+                <li id="currentLink">
+                    <a href="inserimento_giocatori.html">Inserisci giocatore</a>
+                </li>
                 <li>
                     <a href="fairplay.html">Il <span lang="en">fair play</span></a>
-                </li>
-                <li id="currentLink">
-                    <a href="inserimento_giocatori.html">Inserimento giocatori</a>
                 </li>
             </ul>
         </nav>
         <main id="#contenuto">
-            <form class="insert-players">
-                <fieldset id="content-container">
-                    <legend>Dati utili</legend>
-                    <div><label for="Capitano" id="voice">Capitano?</label></div>
-                    <div><input type="radio" name="yes" value="1" id="voice" /> <strong>Sì</strong></div>
-                    <div><input type="radio" name="nope" value="2" id="voice" /> <strong>No</strong></div>
-                    
-                    <label for="data" id="voice">Data di Nascita</label>
-                    <input type="date" id="data" name="data">
-                    
-                    <label for="luogo" id="voice">Luogo di Nascita</label>
-                    <input type="text" id="luogo" name="luogo" placeholder="Luogo">
+            
+<main id="content">
+	
+	<h1>Inserisci nuovo giocatore</h1>
 
-                    <label for="altezza" id="voice">Altezza</label>
-                    <input type="text" id="altezza" name="altezza" placeholder="Altezza">
-                </fieldset>
+<form method="post" action="nuovoGiocatoreLive.php">
+	
+	<messaggiForm />
 
-                <fieldset id="content-container">
-                    <legend>Squadra</legend>
-                    <label for="squadra" id="voice">Squadra in campionato</label>
-                    <input type="text" id="squadra" name="squadra" placeholder="Squadra">
+	<fieldset>
+		<legend>Informazioni generali</legend>
+	
+		<label for="nome">Nome e Cognome: </label>
+		<span><input type="text" name="nome" id="nome"  value="<valoreNome />" /></span>
 
-                    <label for="altezza" id="voice">Altezza</label>
-                    <input type="text" id="altezza" name="altezza" placeholder="Altezza">
-                </fieldset>
+		<p>Capitano?</p>
 
-                <fieldset id="content-container">
-                    <legend>Nazionale</legend>
-                    <label for="ruolo" id="voice">Ruolo</label>
-                    <input type="text" id="ruolo" name="ruolo" placeholder="Ruolo">
+		<span><input type="radio" id="capitano_si" name="capitano" value="1" /></span>
+		<label for="capitano_si">Si</label><br />
+		<span><input type="radio" id="capitano_no" name="capitano" value="0" checked /></span>
+		<label for="capitano_no">No</label><br />
+	
+		<label for="dataNascita">Data di Nascita: </label>
+		<span><input type="date" name="dataNascita" id="dataNascita" value="<valData />" required/></span><br />
 
-                    <label for="maglia" id="voice">Maglia</label>
-                    <input type="text" id="maglia" name="maglia" placeholder="Maglia">
-                </fieldset>
+		<label for="luogo">Luogo di Nascita: </label>
+		<span><input type="text" name="luogo" id="luogo" value="<valLuogo />" required/></span><br />
+		
+		<label for="altezza">Altezza: </label> 
+		<span><input type="number" min="130" name="altezza" id="altezza" value="<valoreAltezza />"/></span><br />
+	</fieldset>
+	
+	<fieldset>
+		<legend>Squadra</legend>
+	
+		<label for="squadra">Squadra in campionato: </label>
+		<span><input type="text" name="squadra" id="squadra"  value="<valoreSquadra />"/></span><br />
+	
+		<label for="maglia">Maglia: </label>
+		<span><input type="number" min="1" name="maglia" id="maglia" value="<valoreMaglia />" /></span><br />
+	</fieldset>
 
-                <fieldset id="content-container">
-                    <legend>Carriera</legend>
-                    <label for="punti_ricezioni" id="voice">Punti/ricezioni</label>
-                    <input type="text" id="punti_ricezioni" name="punti_ricezioni" placeholder="Punti/ricezioni">
-
-                    <label for="riconoscimenti" id="voice">Riconoscimenti</label>
-                    <textarea id="riconoscimenti" name="riconoscimenti"></textarea>
-
-                    <label for="note" id="voice">Note</label>
-                    <textarea id="note" name="note"></textarea>
-                </fieldset>
-                
-            </form>
+	<fieldset>
+		<legend>Nazionale</legend>
+	
+		<label for="ruolo">Ruolo: </label>
+		<select id="ruolo" name="ruolo" value="<valoreRuolo />">
+  			<option value="Palleggiatore">Palleggiatore</option>
+  			<option value="Libero">Libero</option>
+  			<option value="Centrale">Centrale</option>
+  			<option value="Schiacciatore">Schiacciatore</option>
+  			<option value="Opposto">Opposto</option>
+		</select><br />
+	
+		<label for="magliaNazionale">Maglia in Nazionale: </label>
+		<span><input type="number" min="1" name="magliaNazionale" id="magliaNazionale" value="<valoreMagliaNazionale />" /></span><br />
+	</fieldset>
+	
+	<fieldset>
+		<legend>Carriera</legend>
+		<label for="punti">Punti/ricezioni: </label>
+		<span><input type="number" min="1" name="punti" id="punti" value="<valorePunti />" /></span><br />
+		<label for="riconoscimenti">Riconoscimenti: </label>
+		<span><textarea id="riconoscimenti" name="riconoscimenti"><valoreRiconoscimenti /></textarea></span><br />
+		<label for="note">Note: </label>
+		<span><textarea id="note" name="note"><valoreNote /></textarea></span><br />
+		
+	</fieldset>
+	
+	<fieldset>
+		<legend>Bottoni</legend>
+		<input type="submit" id="submit" name="submit" class="margineSinistro" value="Inserisci giocatore" />
+		<input type="reset" id="reset" class="margineSinistro" value="Cancella tutto" />
+	</fieldset>
+	
+	</form>
+	</div>
+</main>
         </main>
         <footer>
             <img src="images/valid-xhtml10.png" alt="W3C html valido">
