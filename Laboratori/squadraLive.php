@@ -7,7 +7,6 @@ use DB\DBAccess;
 //a prescindere dal sistema operativo
 
     require_once "..".DIRECTORY_SEPARATOR."connessione.php"; //DIRECTORY_SEPARATOR è una costante che contiene il separatore di directory del sistema operativo
-
     $paginaHTML = file_get_contents("squadra_php.html"); //legge il file squadra.html e lo mette in una stringa
 
     $connessione = new DBAccess(); //crea un oggetto di tipo DBAccess come handle per la connessione
@@ -76,7 +75,7 @@ use DB\DBAccess;
     }
     else{
         //Occorre mettere il testo in forma paragrafo <p> per fare in modo che il browser lo interpreti come codice html
-        $stringaGiocatori = "<p>I sistemi sono momentaneamente fuori servizio</p>"; 
+        $stringaGiocatori="<span>Alcun giocatore è presente</span>"; #manda una mail all'amministratore per avvisarlo        
         //se ci fosse un problema reale, chiaramente si cerca di contattare l'admin il prima possibile
     }
 
