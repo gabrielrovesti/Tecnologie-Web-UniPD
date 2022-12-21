@@ -6,7 +6,7 @@ use DB\DBAccess;
 //si usa invece una concatenazione di stringhe per fare in modo di muoversi tra le cartelle
 //a prescindere dal sistema operativo
 
-    require_once "..".DIRECTORY_SEPARATOR."connessione.php"; //DIRECTORY_SEPARATOR è una costante che contiene il separatore di directory del sistema operativo
+    require_once ".".DIRECTORY_SEPARATOR."connessione.php"; //DIRECTORY_SEPARATOR è una costante che contiene il separatore di directory del sistema operativo
     $paginaHTML = file_get_contents("squadra_php.html"); //legge il file squadra.html e lo mette in una stringa
 
     $connessione = new DBAccess(); //crea un oggetto di tipo DBAccess come handle per la connessione
@@ -21,7 +21,7 @@ use DB\DBAccess;
         $giocatori = $connessione->getList(); //salva la lista dei giocatori in giocatori
         $connessione->closeDBConnection(); //chiude la connessione
 
-        if(!$giocatori != null){
+        if($giocatori != null){
             $stringaGiocatori .= '<dl id="giocatori">'; //crea una stringa vuota
 
         foreach ($giocatori as $giocatore) { //Eseguiamo un ciclo per prendere ogni giocatore dal DB

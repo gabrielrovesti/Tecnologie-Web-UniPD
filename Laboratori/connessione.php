@@ -45,6 +45,34 @@ class DBAccess{
         }
     }
     
+    public function insertNewPlayer($nome, $cognome, $dataNascita, $numeroMaglia, $luogo, $altezza, $squadra, $ruolo, $magliaNazionale, $punti, $note, $riconoscimenti){
+        //le virgolette servono per evitare errori di sintassi e la query non compilerebbe (non riconoscerebbe le variabili)
+        $query = "INSERT INTO giocatori (nome, cognome, dataNascita, numeroMaglia, luogo, altezza, squadra, ruolo, magliaNazionale, punti, note, riconoscimenti) 
+        VALUES(\"$nome\", \"$cognome\", \"$dataNascita\", \"$numeroMaglia\", \"$luogo\", \"$altezza\", \"$squadra\", \"$ruolo\", \"$magliaNazionale\", \"$punti\", \"$note\", \"$riconoscimenti\")";
+       
+        //alternativamente si sceglie tra questo modo e mysqli_affected_rows
+        $queryResult=mysqli_query($this->connection, $query) or die("Errore in openDBConnection: ".mysqli_error($this->connection));
+        
+        if(mysqli_affected_rows($this->connection) > 0){ //se ci sono dei dati da ritornare
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+    public function deletePlayer($id){
+        $query = "DELETE FROM giocatori WHERE ID = $id";
+
+        $queryResult=mysqli_query($this->connection, $query) or die("Errore in openDBConnection: ".mysqli_error($this->connection));
+        
+        if(mysqli_affected_rows($this->connection) > 0){ //se ci sono dei dati da ritornare
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
 }
 
 ?>

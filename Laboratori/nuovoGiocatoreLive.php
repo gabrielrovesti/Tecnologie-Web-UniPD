@@ -66,7 +66,7 @@ if(isset($_POST['submit'])){  //se è stato premuto il bottone "submit" all'inte
         $messaggiPerForm .= '<li>Numero di maglia non inserito</li>';
     }
     else{
-        if(preg_match("/^\d+$/", $numeroMaglia)){ //se il numero di maglia è una stringa e non un numero
+        if(!(ctype_digit($numeroMaglia))){ //c_type_digit() controlla se la stringa contiene solo caratteri numerici
             $messaggiPerForm .= '<li>Il numero di maglia deve essere inserito come numero</li>';
         }
     }
@@ -86,8 +86,8 @@ if(isset($_POST['submit'])){  //se è stato premuto il bottone "submit" all'inte
         $messaggiPerForm .= '<li>Altezza non inserita</li>';
     }
     else{
-        if(preg_match("/^\d+$/", $altezza)){
-            $messaggiPerForm .= '<li>L\'altezza non può contenere caratteri</li>';
+        if(!(ctype_digit($altezza)) && ($altezza > 129)){
+            $messaggiPerForm .= '<li>L\'altezza deve essere un numero maggiore di 130</li>';
         }
     }
 
@@ -116,7 +116,7 @@ if(isset($_POST['submit'])){  //se è stato premuto il bottone "submit" all'inte
         $messaggiPerForm .= '<li>Maglia nazionale non inserito</li>';
     }
     else{
-        if(preg_match("/^\d+$/", $magliaNazionale)){
+        if(!(ctype_digit($magliaNazionale))){
             $messaggiPerForm .= '<li>Il numero di maglia nazionale deve essere inserito come numero</li>';
         }
     }
@@ -126,23 +126,60 @@ if(isset($_POST['submit'])){  //se è stato premuto il bottone "submit" all'inte
         $messaggiPerForm .= '<li>Punti non inseriti</li>';
     }
     else{
-        if(preg_match("/^\d+$/", $punti)){
+        if(!(ctype_digit($punti))){
             $messaggiPerForm .= '<li>I punti devono essere inseriti come numero</li>';
         }
     }
 
-    $note = pulisciInput($_POST['note']);
+    $note = pulisciNote($_POST['note']);
     if (strlen($note) == 0){
         $messaggiPerForm .= '<li>Note non inserite</li>';
     }
     else{
-        if(preg_match("/^\d+$/", $note)){ //se il numero di maglia è una stringa e non un numero
-            $messaggiPerForm .= '<li>Le note devono essere inserite come numero</li>';
+        if(preg_match("/\d/", $note)){
+            $messaggiPerForm .= '<li>Le note non possono contenere numeri</li>';
         }
     }
 
-    //Per casa; completare l'elenco delle variabili e sistemare i str_replace
-    //più ragionare su questi ultimi controlli appena fatti
+    $riconoscimenti = pulisciInput($_POST['riconoscimenti']);
+    if (strlen($riconoscimenti) == 0){
+        $messaggiPerForm .= '<li>Riconoscimenti non inseriti</li>';
+    }
+    else{
+        if(preg_match("/\d/", $riconoscimenti)){
+            $messaggiPerForm .= '<li>I riconoscimenti non possono contenere numeri</li>';
+        }
+    }
+
+    if($messaggiPerForm == ""){ //se non ci sono messaggi di errore
+        $connessione = new DBAccess();
+        $connOK = $connessione->openDBConnection();
+        if($connOK){
+            //si può sia lavorare prendendo l'input che usando un array associativo
+            $queryOK = $connessione->insertNewPlayer($nome, $cognome, $dataNascita, $numeroMaglia, $luogo, $altezza, $squadra, $ruolo, $magliaNazionale, $punti, $note, $riconoscimenti);
+            if($queryOK){
+                //sempre dare feedback all'utente anche quando le cose vanno bene
+                //attenzione: tutti i messaggi di errore devono essere chiari, gli input devono essere controllati bene, 
+                //non si deve disorientare l'utente e tutto deve essere accessibile
+                //attenzione all'errore 404
+
+                //L'area a cui si accede dopo il login e si deve entrare nella dashboard dell'utente (non in home)
+                //occorre "premiare" l'utente, dicendogli cosa deve fare in più
+                $messaggiPerForm = '<div id = "messageErrors"><p>L\'inserimento è avvenuto con successo</p></div>';
+            }
+            else{
+                $messaggiPerForm = '<div id = "messageErrors"><p>Problema nell\'inserimento dei dati, controlla se hai
+                usato caratteri speciali</p></div>';
+            }
+        }
+        else{
+            $messaggiPerForm = '<div id = "messageErrors"<p>I nostri sistemi sono al momento non funzionanti,
+            ci scusiamo per il disagio</p></div>';
+        }
+    }
+    else{
+        $messaggiPerForm = '<div id = "messageErrors"><ul>' . $messaggiPerForm . '</ul></div>';
+    }
 }
 
 $paginaHTML = str_replace("<messaggiForm />", $messaggiPerForm, $paginaHTML); //sostituisce il valore del segnaposto con il codice corrispondente
@@ -154,4 +191,6 @@ $paginaHTML = str_replace("<valoreSquadra />", $squadra, $paginaHTML);
 $paginaHTML = str_replace("<valoreRuolo />", $ruolo, $paginaHTML);
 $paginaHTML = str_replace("<valoreMagliaNazionale />", $magliaNazionale, $paginaHTML);
 $paginaHTML = str_replace("<valorePunti />", $punti, $paginaHTML);
+$paginaHTML = str_replace("<valoreNote />", $note, $paginaHTML);
+$paginaHTML = str_replace("<valoreRiconoscimenti />", $riconoscimenti, $paginaHTML);
 ?>
