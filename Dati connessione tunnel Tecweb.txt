@@ -1,0 +1,13 @@
+Tunnel:
+ssh grovesti@sshpaolotti.studenti.math.unipd.it -L8080:tecweb:80 -L8022:tecweb:22
+jd@g9^LW
+
+Filezilla:
+Host: sftp://localhost
+Nome utente: grovesti
+Password: (quella)
+Porta: 8022
+
+PhpMyAdmin:
+User: grovesti
+Password: ahx4uyooPueC5nia
