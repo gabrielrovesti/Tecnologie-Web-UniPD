@@ -1,0 +1,13 @@
+Buongiorno a tutti, volevo condividere con voi una nota sul concorso “Accattivante Accessibile”, magari non del tutto scontata.
+
+Attenzione a modificare il comando per effettuare il tunneling da fuori dipartimento sostituendo “caa” a “tecweb”; e di conseguenza anche nel link di consegna.
+
+Se torna utile, il comando diventa quindi il seguente:
+
+ssh paolotti.studenti.math.unipd.it -l ncognome -L8080:caa:80 -L8443:caa:443 -L8022:caa:22
+
+mentre il link di consegna al sito diventa nella forma:
+
+http://caa.studenti.math.unipd.it/ncognome/
+
+Spero possa essere tornato utile a qualcuno, non essendo del tutto scontato; buona giornata a tutti!

@@ -1,0 +1,11 @@
+Di fatto, pochi giorni dopo il concorso, aprono le iscrizioni in un Moodle apposito per il concorso Accattivante ed Accessibile.
+
+Una volta iscritti a questo Moodle, si ha tempo poco più di una settimana per fare la consegna anche sul server apposito "caa.studenti.math.unipd.it".
+
+Per quest'ultimo, vengono date apposite credenziali di accesso. Si noti che si può provare a fare tunnel come indicato,
+tuttavia i server potrebbero essere spenti per le lauree.
+
+Le credenziali arrivano a colui/colei che ha fatto la consegna per il gruppo X, tale poi da fare la consegna
+con le stesse indicazioni del progetto normale di Tecnologie Web, presenti in sezione apposita.
+
+G. R.
